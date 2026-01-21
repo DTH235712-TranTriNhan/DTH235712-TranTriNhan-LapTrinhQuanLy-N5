@@ -28,214 +28,183 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label3 = new Label();
-            panel2 = new Panel();
-            dataGridView1 = new DataGridView();
-            ID = new DataGridViewTextBoxColumn();
-            TenLoai = new DataGridViewTextBoxColumn();
+            groupBox1 = new GroupBox();
             label1 = new Label();
-            txtTenLoai = new Label();
             textBox1 = new TextBox();
             btnThem = new Button();
-            btnHuyBo = new Button();
-            btnLuu = new Button();
-            btnThoat = new Button();
             btnSua = new Button();
             btnXoa = new Button();
-            panel1 = new Panel();
-            panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            panel1.SuspendLayout();
+            btnLuu = new Button();
+            bthHuyBo = new Button();
+            btnThoat = new Button();
+            groupBox2 = new GroupBox();
+            dataGridView = new DataGridView();
+            ID = new DataGridViewTextBoxColumn();
+            TenLoai = new DataGridViewTextBoxColumn();
+            groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             SuspendLayout();
             // 
-            // label3
+            // groupBox1
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(5, 122);
-            label3.Name = "label3";
-            label3.Size = new Size(139, 15);
-            label3.TabIndex = 10;
-            label3.Text = "Danh sách loại sản phẩm";
-            // 
-            // panel2
-            // 
-            panel2.Controls.Add(dataGridView1);
-            panel2.Location = new Point(5, 140);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(787, 298);
-            panel2.TabIndex = 12;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ID, TenLoai });
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(0, 0);
-            dataGridView1.MultiSelect = false;
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.RowHeadersVisible = false;
-            dataGridView1.Size = new Size(787, 298);
-            dataGridView1.TabIndex = 1;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // ID
-            // 
-            ID.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            ID.DataPropertyName = "ID";
-            ID.Frozen = true;
-            ID.HeaderText = "ID";
-            ID.Name = "ID";
-            ID.ReadOnly = true;
-            ID.Width = 43;
-            // 
-            // TenLoai
-            // 
-            TenLoai.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            TenLoai.DataPropertyName = "TenLoai";
-            TenLoai.HeaderText = "Tên loại sản phẩm";
-            TenLoai.Name = "TenLoai";
-            TenLoai.ReadOnly = true;
+            groupBox1.Controls.Add(btnThoat);
+            groupBox1.Controls.Add(bthHuyBo);
+            groupBox1.Controls.Add(btnLuu);
+            groupBox1.Controls.Add(btnXoa);
+            groupBox1.Controls.Add(btnSua);
+            groupBox1.Controls.Add(btnThem);
+            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(label1);
+            groupBox1.Location = new Point(-2, 12);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(807, 102);
+            groupBox1.TabIndex = 0;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Thông tin hãng sản xuất";
+            groupBox1.Enter += groupBox1_Enter;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(4, 4);
+            label1.Location = new Point(24, 33);
             label1.Name = "label1";
-            label1.Size = new Size(135, 15);
+            label1.Size = new Size(121, 15);
             label1.TabIndex = 0;
-            label1.Text = "Thông tin loại sản phẩm";
-            // 
-            // txtTenLoai
-            // 
-            txtTenLoai.AutoSize = true;
-            txtTenLoai.Location = new Point(39, 41);
-            txtTenLoai.Name = "txtTenLoai";
-            txtTenLoai.Size = new Size(121, 15);
-            txtTenLoai.TabIndex = 1;
-            txtTenLoai.Text = "Tên loại sản phẩm (*):\r\n";
+            label1.Text = "Tên hãng sản xuất (*):\r\n";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(163, 38);
+            textBox1.Location = new Point(151, 30);
+            textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(583, 23);
-            textBox1.TabIndex = 2;
-            textBox1.TextChanged += textBox1_TextChanged;
+            textBox1.Size = new Size(628, 27);
+            textBox1.TabIndex = 1;
             // 
             // btnThem
             // 
-            btnThem.Location = new Point(163, 67);
+            btnThem.Location = new Point(151, 63);
             btnThem.Name = "btnThem";
-            btnThem.Size = new Size(83, 30);
-            btnThem.TabIndex = 3;
+            btnThem.Size = new Size(85, 27);
+            btnThem.TabIndex = 2;
             btnThem.Text = "Thêm";
             btnThem.UseVisualStyleBackColor = true;
-            btnThem.Click += this.button1_Click;
-            // 
-            // btnHuyBo
-            // 
-            btnHuyBo.Location = new Point(567, 67);
-            btnHuyBo.Name = "btnHuyBo";
-            btnHuyBo.Size = new Size(83, 30);
-            btnHuyBo.TabIndex = 4;
-            btnHuyBo.Text = "Hủy bỏ";
-            btnHuyBo.UseVisualStyleBackColor = true;
-            btnHuyBo.Click += this.button2_Click;
-            // 
-            // btnLuu
-            // 
-            btnLuu.Location = new Point(461, 67);
-            btnLuu.Name = "btnLuu";
-            btnLuu.Size = new Size(83, 30);
-            btnLuu.TabIndex = 5;
-            btnLuu.Text = "Lưu";
-            btnLuu.UseVisualStyleBackColor = true;
-            btnLuu.Click += this.button3_Click;
-            // 
-            // btnThoat
-            // 
-            btnThoat.Location = new Point(665, 67);
-            btnThoat.Name = "btnThoat";
-            btnThoat.Size = new Size(83, 30);
-            btnThoat.TabIndex = 6;
-            btnThoat.Text = "Thoát";
-            btnThoat.UseVisualStyleBackColor = true;
-            btnThoat.Click += button4_Click;
             // 
             // btnSua
             // 
-            btnSua.Location = new Point(261, 67);
+            btnSua.Location = new Point(259, 63);
             btnSua.Name = "btnSua";
-            btnSua.Size = new Size(83, 30);
-            btnSua.TabIndex = 7;
+            btnSua.Size = new Size(85, 27);
+            btnSua.TabIndex = 3;
             btnSua.Text = "Sửa";
             btnSua.UseVisualStyleBackColor = true;
-            btnSua.Click += this.button5_Click;
             // 
             // btnXoa
             // 
-            btnXoa.Location = new Point(361, 67);
+            btnXoa.Location = new Point(371, 63);
             btnXoa.Name = "btnXoa";
-            btnXoa.Size = new Size(83, 30);
-            btnXoa.TabIndex = 8;
+            btnXoa.Size = new Size(85, 27);
+            btnXoa.TabIndex = 4;
             btnXoa.Text = "Xóa";
             btnXoa.UseVisualStyleBackColor = true;
-            btnXoa.Click += this.button6_Click;
             // 
-            // panel1
+            // btnLuu
             // 
-            panel1.Controls.Add(btnXoa);
-            panel1.Controls.Add(btnSua);
-            panel1.Controls.Add(btnThoat);
-            panel1.Controls.Add(btnLuu);
-            panel1.Controls.Add(btnHuyBo);
-            panel1.Controls.Add(btnThem);
-            panel1.Controls.Add(textBox1);
-            panel1.Controls.Add(txtTenLoai);
-            panel1.Controls.Add(label1);
-            panel1.Location = new Point(8, 11);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(784, 108);
-            panel1.TabIndex = 11;
+            btnLuu.Location = new Point(477, 63);
+            btnLuu.Name = "btnLuu";
+            btnLuu.Size = new Size(85, 27);
+            btnLuu.TabIndex = 6;
+            btnLuu.Text = "Lưu";
+            btnLuu.UseVisualStyleBackColor = true;
+            // 
+            // bthHuyBo
+            // 
+            bthHuyBo.Location = new Point(583, 63);
+            bthHuyBo.Name = "bthHuyBo";
+            bthHuyBo.Size = new Size(85, 27);
+            bthHuyBo.TabIndex = 7;
+            bthHuyBo.Text = "Hủy bỏ";
+            bthHuyBo.UseVisualStyleBackColor = true;
+            // 
+            // btnThoat
+            // 
+            btnThoat.Location = new Point(694, 63);
+            btnThoat.Name = "btnThoat";
+            btnThoat.Size = new Size(85, 27);
+            btnThoat.TabIndex = 8;
+            btnThoat.Text = "Thoát";
+            btnThoat.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            groupBox2.Controls.Add(dataGridView);
+            groupBox2.Location = new Point(1, 124);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(798, 320);
+            groupBox2.TabIndex = 1;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Danh sách các hãng sản xuất";
+            // 
+            // dataGridView
+            // 
+            dataGridView.AllowUserToAddRows = false;
+            dataGridView.AllowUserToDeleteRows = false;
+            dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView.Columns.AddRange(new DataGridViewColumn[] { ID, TenLoai });
+            dataGridView.Dock = DockStyle.Fill;
+            dataGridView.Location = new Point(3, 19);
+            dataGridView.MultiSelect = false;
+            dataGridView.Name = "dataGridView";
+            dataGridView.RowHeadersVisible = false;
+            dataGridView.Size = new Size(792, 298);
+            dataGridView.TabIndex = 0;
+            // 
+            // ID
+            // 
+            ID.DataPropertyName = "ID";
+            ID.HeaderText = "ID";
+            ID.Name = "ID";
+            // 
+            // TenLoai
+            // 
+            TenLoai.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            TenLoai.DataPropertyName = "TenLoai";
+            TenLoai.HeaderText = "Tên loại sản phẩm";
+            TenLoai.Name = "TenLoai";
+            TenLoai.Width = 395;
             // 
             // frmLoaiSanPham
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(panel2);
-            Controls.Add(panel1);
-            Controls.Add(label3);
+            Controls.Add(groupBox2);
+            Controls.Add(groupBox1);
             Name = "frmLoaiSanPham";
             Text = "Loại Sản Phẩm";
             Load += this.frmLoaiSanPham_Load;
-            panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-        private Label label3;
-        private Panel panel2;
-        private DataGridView dataGridView1;
+
+        private GroupBox groupBox1;
+        private TextBox textBox1;
+        private Label label1;
+        private Button btnThoat;
+        private Button bthHuyBo;
+        private Button btnLuu;
+        private Button btnXoa;
+        private Button btnSua;
+        private Button btnThem;
+        private GroupBox groupBox2;
+        private DataGridView dataGridView;
         private DataGridViewTextBoxColumn ID;
         private DataGridViewTextBoxColumn TenLoai;
-        private Label label1;
-        private Label txtTenLoai;
-        private TextBox textBox1;
-        private Button btnThem;
-        private Button btnHuyBo;
-        private Button btnLuu;
-        private Button btnThoat;
-        private Button btnSua;
-        private Button btnXoa;
-        private Panel panel1;
     }
 }
