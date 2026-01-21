@@ -28,8 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            label3 = new Label();
+            panel2 = new Panel();
+            dataGridView1 = new DataGridView();
+            ID = new DataGridViewTextBoxColumn();
+            TenLoai = new DataGridViewTextBoxColumn();
             label1 = new Label();
-            label2 = new Label();
+            txtTenLoai = new Label();
             textBox1 = new TextBox();
             btnThem = new Button();
             btnHuyBo = new Button();
@@ -37,16 +42,63 @@
             btnThoat = new Button();
             btnSua = new Button();
             btnXoa = new Button();
-            label3 = new Label();
             panel1 = new Panel();
-            panel2 = new Panel();
-            dataGridView1 = new DataGridView();
-            ID = new DataGridViewTextBoxColumn();
-            TenLoai = new DataGridViewTextBoxColumn();
-            panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(5, 122);
+            label3.Name = "label3";
+            label3.Size = new Size(139, 15);
+            label3.TabIndex = 10;
+            label3.Text = "Danh sách loại sản phẩm";
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(dataGridView1);
+            panel2.Location = new Point(5, 140);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(787, 298);
+            panel2.TabIndex = 12;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ID, TenLoai });
+            dataGridView1.Dock = DockStyle.Fill;
+            dataGridView1.Location = new Point(0, 0);
+            dataGridView1.MultiSelect = false;
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.Size = new Size(787, 298);
+            dataGridView1.TabIndex = 1;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // ID
+            // 
+            ID.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            ID.DataPropertyName = "ID";
+            ID.Frozen = true;
+            ID.HeaderText = "ID";
+            ID.Name = "ID";
+            ID.ReadOnly = true;
+            ID.Width = 43;
+            // 
+            // TenLoai
+            // 
+            TenLoai.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            TenLoai.DataPropertyName = "TenLoai";
+            TenLoai.HeaderText = "Tên loại sản phẩm";
+            TenLoai.Name = "TenLoai";
+            TenLoai.ReadOnly = true;
             // 
             // label1
             // 
@@ -57,14 +109,14 @@
             label1.TabIndex = 0;
             label1.Text = "Thông tin loại sản phẩm";
             // 
-            // label2
+            // txtTenLoai
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(39, 41);
-            label2.Name = "label2";
-            label2.Size = new Size(121, 15);
-            label2.TabIndex = 1;
-            label2.Text = "Tên loại sản phẩm (*):\r\n";
+            txtTenLoai.AutoSize = true;
+            txtTenLoai.Location = new Point(39, 41);
+            txtTenLoai.Name = "txtTenLoai";
+            txtTenLoai.Size = new Size(121, 15);
+            txtTenLoai.TabIndex = 1;
+            txtTenLoai.Text = "Tên loại sản phẩm (*):\r\n";
             // 
             // textBox1
             // 
@@ -134,15 +186,6 @@
             btnXoa.UseVisualStyleBackColor = true;
             btnXoa.Click += this.button6_Click;
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(5, 122);
-            label3.Name = "label3";
-            label3.Size = new Size(139, 15);
-            label3.TabIndex = 10;
-            label3.Text = "Danh sách loại sản phẩm";
-            // 
             // panel1
             // 
             panel1.Controls.Add(btnXoa);
@@ -152,45 +195,12 @@
             panel1.Controls.Add(btnHuyBo);
             panel1.Controls.Add(btnThem);
             panel1.Controls.Add(textBox1);
-            panel1.Controls.Add(label2);
+            panel1.Controls.Add(txtTenLoai);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(8, 5);
+            panel1.Location = new Point(8, 11);
             panel1.Name = "panel1";
             panel1.Size = new Size(784, 108);
             panel1.TabIndex = 11;
-            // 
-            // panel2
-            // 
-            panel2.Controls.Add(dataGridView1);
-            panel2.Location = new Point(5, 140);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(787, 298);
-            panel2.TabIndex = 12;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.AllowUserToOrderColumns = true;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ID, TenLoai });
-            dataGridView1.Location = new Point(0, 0);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(788, 292);
-            dataGridView1.TabIndex = 1;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // ID
-            // 
-            ID.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-            ID.Frozen = true;
-            ID.HeaderText = "ID";
-            ID.Name = "ID";
-            ID.Width = 21;
-            // 
-            // TenLoai
-            // 
-            TenLoai.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            TenLoai.HeaderText = "Tên loại sản phẩm";
-            TenLoai.Name = "TenLoai";
             // 
             // frmLoaiSanPham
             // 
@@ -203,18 +213,22 @@
             Name = "frmLoaiSanPham";
             Text = "Loại Sản Phẩm";
             Load += this.frmLoaiSanPham_Load;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
+        private Label label3;
+        private Panel panel2;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn ID;
+        private DataGridViewTextBoxColumn TenLoai;
         private Label label1;
-        private Label label2;
+        private Label txtTenLoai;
         private TextBox textBox1;
         private Button btnThem;
         private Button btnHuyBo;
@@ -222,11 +236,6 @@
         private Button btnThoat;
         private Button btnSua;
         private Button btnXoa;
-        private Label label3;
         private Panel panel1;
-        private Panel panel2;
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn ID;
-        private DataGridViewTextBoxColumn TenLoai;
     }
 }
