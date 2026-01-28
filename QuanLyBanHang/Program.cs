@@ -11,7 +11,7 @@ namespace QuanLyBanHang
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Froms.frmLoaiSanPham());
+            Application.Run(new Froms.frmNhanVien());
         }
     }
 }
